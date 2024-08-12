@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.decentralized_backend.mapper.TeamMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.decentralized_backend.domain.Team">
+            <id property="teamId" column="team_id" jdbcType="INTEGER"/>
+            <result property="teamName" column="team_name" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+            <result property="teamPassword" column="team_password" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="rootFolderId" column="root_folder_id" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        team_id,team_name,user_id,user_name,
+        team_password,description,root_folder_id,create_time,
+        update_time,is_deleted
+    </sql>
+</mapper>

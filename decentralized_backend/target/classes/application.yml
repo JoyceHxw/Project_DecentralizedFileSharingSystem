@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql:///decentralized
+      username: root
+      password: 2214563
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  servlet:
+    session:
+      cookie:
+        domain: localhost
+        secure: true
+        same-site: none
+  port: 8080

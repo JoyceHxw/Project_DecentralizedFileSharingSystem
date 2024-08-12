@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.decentralized_backend.mapper.StampMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.decentralized_backend.domain.Stamp">
+            <id property="stampId" column="stamp_id" jdbcType="INTEGER"/>
+            <result property="batchId" column="batch_id" jdbcType="VARCHAR"/>
+            <result property="amount" column="amount" jdbcType="BIGINT"/>
+            <result property="depth" column="depth" jdbcType="INTEGER"/>
+            <result property="type" column="type" jdbcType="TINYINT"/>
+            <result property="accountId" column="account_id" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="TINYINT"/>
+            <result property="isExpired" column="is_expired" jdbcType="TINYINT"/>
+            <result property="ttl" column="ttl" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        stamp_id,batch_id,amount,
+        depth,type,account_id,
+        create_time,update_time,is_expired
+    </sql>
+</mapper>
